@@ -8,12 +8,7 @@
 }
 
 html{
-    /* background-image: url(../images/mainBg.jpg); */
-    background-attachment: fixed;
-    background-image: url(../images/parallax.gif);
-    background-position: center;
-    background-size: cover;
-    /* background-color: black; */
+    background-color: black;
 }
 
 body{
@@ -140,7 +135,7 @@ cite{
 
 
 @media (max-width: 600px){
-    header > div > div > img{
+    header > div > img{
         margin-top: 0.5em;
         margin-bottom: 0.5em;
         width: 60%;
