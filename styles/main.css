@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Orbitron:wght@500&family=Permanent+Marker&display=swap');
+
+:root {
+    /* --nav-footer-color: rgb(162, 226, 162); */
+    --contrast-basic-color: rgb(0, 0, 0);
+    --hover-basic-color: hsl(0, 0%, 100%);
+    --basic-color: rgb(190, 190, 190);
+}
+
+html{
+    /* background-image: url(../images/mainBg.jpg); */
+    /* background-attachment: fixed; */
+    background-color: black;
+}
+
+body{
+    margin: 0;
+}
+
+h2{
+    font-size: 1em;
+}
+
+.container{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+.active{
+    color: var(--hover-basic-color);
+}
+
+/* nav{
+    background-color: black;
+    border-radius: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-inline: 1em;
+
+} */
+
+article{
+    /* background-color: black; */
+    border-radius: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-inline: 1em;
+    border-style: solid;
+    border-color: var(--basic-color);
+}
+
+nav > ul > li{
+    list-style: none;
+    margin: 0;
+    color: var(--basic-color);
+    margin-top: 1em;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    padding: 5px;
+    color: var(--basic-color);
+    font-family: orbitron;
+    font-size: 1.5em;
+}
+
+nav > ul > li > a:hover{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(https://thumbs.gfycat.com/ConsciousMedicalBeardedcollie-max-1mb.gif);
+}
+
+
+nav > ul{
+    border-top: solid;
+    border-color: var(--basic-color);
+    border-width: thick;
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--basic-color);
+    padding: 0;
+}
+
+.me{
+    text-align: center;
+}
+
+header > div > img{
+    width: 25%;
+    margin-top: 2em;
+    /* margin-bottom: 2em; */
+}
+
+
+
+
+
+
+header{
+    margin-bottom: 10em;
+}
+
+
+.flash{
+    -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url(https://thumbs.gfycat.com/ConsciousMedicalBeardedcollie-max-1mb.gif);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* list_style */
+/* text_decoration */
+
+
+@media (max-width: 600px){
+    header > div > img{
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        width: 60%;
+    }
+
+    nav > ul > li > a{
+        font-size: 1em;
+    }
+
+    header{
+        margin-bottom: 2em;
+    }
+
+}
