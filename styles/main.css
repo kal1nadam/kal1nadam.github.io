@@ -8,8 +8,6 @@
 }
 
 html{
-    /* background-image: url(../images/mainBg.jpg); */
-    /* background-attachment: fixed; */
     background-color: black;
 }
 
@@ -93,7 +91,6 @@ nav > ul{
 header > div > img{
     width: 25%;
     margin-top: 2em;
-    /* margin-bottom: 2em; */
 }
 
 
@@ -102,7 +99,8 @@ header > div > img{
 
 
 header{
-    margin-bottom: 10em;
+    padding-bottom: 8em;
+    background-color: black;
 }
 
 
@@ -115,6 +113,15 @@ header{
 
 
 
+footer{
+    border-top: var(--basic-color);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background-color: black;
+}
 
 
 
@@ -136,10 +143,6 @@ header{
 
     nav > ul > li > a{
         font-size: 1em;
-    }
-
-    header{
-        margin-bottom: 2em;
     }
 
 }
