@@ -88,7 +88,7 @@ nav > ul{
     text-align: center;
 }
 
-header > div > img{
+header > div > div > img{
     width: 25%;
     margin-top: 2em;
 }
@@ -114,15 +114,15 @@ header{
 
 
 footer{
-    border-top: var(--basic-color);
-    border-style: solid;
-    border-width: 1px;
     text-align: center;
     padding-bottom: 1em;
     padding-top: 1em;
     background-color: black;
 }
 
+cite{
+    color: var(--basic-text-color);
+}
 
 
 
@@ -143,6 +143,11 @@ footer{
 
     nav > ul > li > a{
         font-size: 1em;
+    }
+
+    header{
+        padding-bottom: 3em;
+        padding-top: 0.5em;
     }
 
 }
