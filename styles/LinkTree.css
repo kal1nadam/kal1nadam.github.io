@@ -1,6 +1,47 @@
-.links{
+body{
+    background-color: rgb(75, 75, 75);
+    margin: 0;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    /* align-items: center; */
 }
+
+.avengers{
+    background-image: url(../images/avengers2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.dedsec{
+    background-image: url(../images/2nd.gif);
+    background-position: center;
+}
+
+body > a{
+    align-self: center;
+    width: 40%;
+    height: 80vh;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 1em;
+    border-width: 0.5vh;
+    margin: 9.5vh 0 9.5vh 0;
+}
+
+body > a:hover{
+    border-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 800px){
+    body{
+        flex-direction: column;
+    }
+
+    body > a{
+        width: 80%;
+    }
+}
+
