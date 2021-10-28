@@ -28,7 +28,7 @@ body > a{
     height: 80vh;
     border-style: solid;
     border-color: rgb(0, 0, 0);
-    border-radius: 1em;
+    border-radius: 70px;
     border-width: 0.5vh;
     margin: 9.5vh 0 9.5vh 0;
     text-decoration: none;
@@ -51,6 +51,12 @@ body > a:hover{
 
 
 
+
+
+
+
+
+
 @media (max-width: 800px){
     body{
         flex-direction: column;
@@ -60,4 +66,18 @@ body > a:hover{
         width: 80%;
     }
 }
+
+@media (min-width: 800px) and (max-width: 1200px){
+    body > a{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 600px){
+    body > a{
+        font-size: 3em;
+    }
+}
+
+
 
