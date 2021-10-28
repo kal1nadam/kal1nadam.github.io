@@ -1,0 +1,81 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.stripe{
+    background-color: rgb(100, 100, 100);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 3.5em;
+}
+
+.stripe i{
+    color: rgb(255, 255, 255);
+}
+
+.stripe ul{
+    position: absolute;
+    top: 3em;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.stripe li{
+    list-style: none;
+    margin: 0 1em 0 1em;
+}
+
+.stripe a{
+    width: 2em;
+}
+
+.stripe2{
+    top: 3em;
+    background-color: rgb(56, 56, 56);
+    height: 3.5em;
+}
+
+.shape{
+    position: absolute;
+    left:calc(50% - 8em);
+    /* right: auto; */
+    width: 10em;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 3em solid rgb(56, 56, 56);
+    z-index: 2;
+}
+
+.Alogo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 1em;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.Alogo > img{
+    width: 9em;
+}
+
+
+.BG{
+    position: absolute;
+    top: 7em;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/BlaPanBG.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
