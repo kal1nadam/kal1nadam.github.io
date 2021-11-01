@@ -1,15 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Poppins:wght@300&display=swap');
+
 :root{
     --bg-height: 75em;
     --jumbotron-half-width: 30vw;
     --jumbotron-height: auto;
     --jumbotron-margin-top: 315px;
     --jumbotron-betwen-space: 100px;
-    --jumbotron-title-height: 120px;
-    --jumbotron-text-padding: 10px;
+    --jumbotron-title-height: 100px;
+    --jumbotron-text-padding: 30px;
     --space-betwen-main-and-footer: 10em;
 
     --footer-height: 10em;
 }
+
+/* header{
+    top: 0;
+    position: sticky;
+    z-index: 100;
+} */
 
 html{
     padding: 0;
@@ -21,7 +29,7 @@ body{
     margin: 0;
 }
 
-.absolute{
+.center{
     display: flex;
     justify-content: center;
 }
@@ -39,8 +47,9 @@ body{
     background-image: linear-gradient(to top right, rgb(26, 79, 192), rgb(21, 58, 138)) ;
     padding: 0.7em;
     font-size: 1em;
+    font-family: 'Merriweather Sans', sans-serif;
     text-transform: uppercase;
-    color: white;
+    color: rgb(204, 204, 204);
     border-radius: 2px;
     z-index: 3;
     /* box-shadow: 2px 2px 0px 0.2px rgb(23, 66, 160); */
@@ -110,8 +119,6 @@ body{
 }
 
 main{
-    padding-bottom: var(--space-betwen-main-and-footer);
-    /* height: 100%; */
     background-color: rgb(44, 44, 44);
     align-content: center;
 }
@@ -134,10 +141,9 @@ main{
     display: grid;
     grid-template-areas:"title title"
                         "pic text";
-    grid-auto-columns: var(--jumbotron-half-width);
-    /* grid-auto-columns: 30vw; */
+    grid-auto-columns: auto;
     grid-template-rows: var(--jumbotron-title-height) var(--jumbotron-height);
-    /* z-index: ; */
+
 }
 
 .jumbotron > img{
@@ -145,6 +151,8 @@ main{
     width: var(--jumbotron-half-width);
     height: var(--jumbotron-height);
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .jumbotron > p{
@@ -158,12 +166,17 @@ main{
     width: var(--jumbotron-half-width);
     color: white;
     font-size: 17px;
+    font-family: 'Poppins', sans-serif;
     background-color: rgba(0, 0, 0, 0.774);
-    line-height: 30px;
+    line-height: 25px;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .jumbotron > h1{
     font-size: 2em;
+    font-family: 'Merriweather Sans', sans-serif;
     grid-area: title;
     text-align: center;
     color: rgb(211, 211, 211);
@@ -205,54 +218,68 @@ main{
 }
 
 .options > h1{
+    font-size: 2em;
+    font-family: 'Merriweather Sans', sans-serif;
     grid-area: titleop;
     color: rgb(223, 223, 223);
     text-align: center;
 }
 
-.op > h2, p{
+.op > h2{
+    font-family: 'Merriweather Sans', sans-serif;
     color: white;
     text-align: center;
     padding: 0 1em 0 1em;
 }
 
+.op > p{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 0 1em 1em 1em;
+}
+
+.op > img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 
 
 
 
 .shapebottom{
-    position: relative;
-    /* margin-bottom: em; */
     width: 70vw;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 3em solid rgb(17, 17, 17);
-    z-index: 0;
+    margin-top: var(--space-betwen-main-and-footer);
 }
 
 
 footer{
     background-color: rgb(17, 17, 17);
-    /* height: var(--footer-height); */
-    /* padding-bottom: 1em; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-
 }
 
 footer img{
-    position: absolute;
     width: 10em;
-    /* z-index: ; */
-
+    margin-bottom: 1em;
 }
 
 footer > p{
-    margin: 0;
+    margin: 0 0 1em 0;
     line-height: 25px;
     max-width: 60vw;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 
 }
+
+footer b{
+    font-size: 1.2em;
+}
+
