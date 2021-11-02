@@ -35,11 +35,25 @@
 
     <main>
 
-        <div class="paralax">
-            <!-- <div class="BG"></div> -->
-            <img class="BG" src="./images/BlaPanBG.jpg" alt="black panther background">
-            <img id="AveLogo" src="./images/avengersFullLogo.png" alt="avengers logo">
+        
+        <div class="carousel-container">
+
+            <div class="slide fade">
+                <img src="./images/BlaPanBG.jpg" alt="black panther background">
+            </div>
+
+            <div class="slide fade">
+                <img src="./images/HawBG.jpg" alt="avengers fight">
+            </div>
+            
+            <div class="slide fade">
+                <img src="./images/IroManBG.jpg" alt="flying iron-man">
+            </div>
+
         </div>
+
+            <img id="AveLogo" src="./images/avengersFullLogo.png" alt="avengers logo">
+        
 
         <section class="JUMBOTRONS">
 
@@ -103,16 +117,41 @@
     
     <script type="text/javascript">
         document.addEventListener("mousemove", function(e){
-            const bg = document.querySelector('.BG')
+            const bg = document.querySelector('.slide')
             const logo = document.querySelector('#AveLogo')
 
-            bg.style.width = 100 + e.pageX/500 + e.pageY/1000 + '%';
+            // bg.style.width = 100 + e.pageX/500 + '%';
             
-            logo.style.width = 70 + e.pageX/500 + '%';
-            // logo.style.height = 70 + e.pageY/1000 + '%';
+            // logo.style.top = e.pageY + 'px';
+            logo.style.bottom = e.pageY + 'px';
+
+            // logo.style.right = e.pageX/10 + 'px';
+            logo.style.left = e.pageX + 'px';
         })
 
     </script>
+
+<!-- CAROUSEL  -->
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      
+      slides[slideIndex-1].style.display = "block";  
+      
+      setTimeout(showSlides, 6000); // Change image every 2 seconds
+    }
+    </script>
+    
 
 
 </body>

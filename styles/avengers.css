@@ -110,25 +110,11 @@ body{
 }
 
 
-.BG{
-    position: absolute;
-    top: 7em;
-    height: var(--bg-height);
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    /* background-image: url(../images/BlaPanBG.jpg); */
-    /* overflow: hidden; */
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    z-index: 0;
-}
+
 
 main{
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(180deg, rgb(17, 17, 17), rgb(71, 71, 71));
     align-content: center;
 }
@@ -136,6 +122,8 @@ main{
 #AveLogo{
     position: absolute;
     transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
     top: 70%;
     left: 50%;
     width: 60%;
@@ -161,12 +149,12 @@ main{
 
 }
 
-#firsttitle{
+/* #firsttitle{
     -webkit-background-clip: text;
 	background-clip: text;
 	background-image: linear-gradient(to left, rgb(24, 24, 24), rgb(180, 180, 180));
 	color: transparent;
-}
+} */
 
 .jumbotron > img{
     grid-area: pic;
@@ -303,5 +291,71 @@ footer > p{
 
 footer b{
     font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CAROUSEL */
+
+
+.carousel-container{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 7em;
+    height: var(--bg-height);
+    /* height: auto; */
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: rgb(34, 34, 34);
+    /* background-image: url(../images/BlaPanBG.jpg); */
+    /* overflow: hidden; */
+    /* background-size: cover; */
+    /* background-position-x: center; */
+    /* background-repeat: no-repeat; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* z-index: 0; */
+}
+
+.fade > img{
+    height: var(--bg-height);
+    object-fit: cover;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
