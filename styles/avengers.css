@@ -34,10 +34,7 @@ body{
     justify-content: center;
 }
 
-.stripe{
-    background-color: rgb(83, 83, 83);
-    height: 3.5em;
-}
+
 
 .trailer{
     text-decoration: none;
@@ -79,9 +76,18 @@ body{
     margin: 0 1em 0 1em;
 }
 
+.stripe{
+    /* position: relative; */
+    background-color: rgb(83, 83, 83);
+    height: 3.5em;
+    /* z-index: 2; */
+}
+
 .stripe2{
+    /* position: relative; */
     background-color: rgb(56, 56, 56);
     height: 3.5em;
+    /* z-index: 1; */
 }
 
 .shape{
@@ -109,12 +115,16 @@ body{
     top: 7em;
     height: var(--bg-height);
     width: 100%;
-    background-image: url(../images/BlaPanBG.jpg);
+    object-fit: cover;
+    object-position: center;
+    /* background-image: url(../images/BlaPanBG.jpg); */
+    /* overflow: hidden; */
+    background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     z-index: 0;
 }
 
@@ -124,7 +134,12 @@ main{
 }
 
 #AveLogo{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
     width: 60%;
+    z-index: 10;
 }
 
 .JUMBOTRONS{
@@ -149,7 +164,7 @@ main{
 #firsttitle{
     -webkit-background-clip: text;
 	background-clip: text;
-	background-image: linear-gradient(to bottom left, rgb(24, 24, 24), rgb(131, 131, 131));
+	background-image: linear-gradient(to left, rgb(24, 24, 24), rgb(180, 180, 180));
 	color: transparent;
 }
 

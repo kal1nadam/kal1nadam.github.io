@@ -35,7 +35,9 @@
 
     <main>
 
-        <div class="BG">
+        <div class="paralax">
+            <!-- <div class="BG"></div> -->
+            <img class="BG" src="./images/BlaPanBG.jpg" alt="black panther background">
             <img id="AveLogo" src="./images/avengersFullLogo.png" alt="avengers logo">
         </div>
 
@@ -98,6 +100,19 @@
         <p>Developed by Crystal Dynamics and Eidos Montréal. Development support provided by Nixxes. SQUARE ENIX and the SQUARE ENIX logo are registered trademarks or trademarks of Square Enix Holdings Co., Ltd. Crystal Dynamics, Crystal Northwest, Eidos Montréal and their respective logos are registered trademarks or trademarks of Square Enix Limited.</p>
         
     </footer>
+    
+    <script type="text/javascript">
+        document.addEventListener("mousemove", function(e){
+            const bg = document.querySelector('.BG')
+            const logo = document.querySelector('#AveLogo')
+
+            bg.style.width = 100 + e.pageX/500 + e.pageY/1000 + '%';
+            
+            logo.style.width = 70 + e.pageX/500 + '%';
+            // logo.style.height = 70 + e.pageY/1000 + '%';
+        })
+
+    </script>
 
 
 </body>
