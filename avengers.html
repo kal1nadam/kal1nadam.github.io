@@ -117,39 +117,46 @@
     
     <script type="text/javascript">
         document.addEventListener("mousemove", function(e){
-            const bg = document.querySelector('.slide')
             const logo = document.querySelector('#AveLogo')
 
-            // bg.style.width = 100 + e.pageX/500 + '%';
-            
-            // logo.style.top = e.pageY + 'px';
-            logo.style.bottom = e.pageY + 'px';
-
-            // logo.style.right = e.pageX/10 + 'px';
-            logo.style.left = e.pageX + 'px';
+        
+            logo.style.left = 47.5 + e.pageX/500 + '%';
+            logo.style.top = 70 + e.pageY/200 + '%';
         })
 
     </script>
 
 <!-- CAROUSEL  -->
     <script>
-    var slideIndex = 0;
-    showSlides();
+        var slideIndex = 0;
+        carousel();
+
+        //AT FIRST A WANTED TO PICTURE TO BE CHANGED WHEN MOUSE CLICK, BUT I LIKE THIS TIMEOUT THING MORE
+
+        // const bg = document.getElementsByClassName('.carousel-container')
+
+        // document.addEventListener("click", myFunction);
+
+        // function myFunction(){
+        //     carousel()
+        // }
+
+        
     
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("slide");
-      
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      
-      slides[slideIndex-1].style.display = "block";  
-      
-      setTimeout(showSlides, 6000); // Change image every 2 seconds
-    }
+        function carousel() {
+          var i;
+          var slides = document.getElementsByClassName("slide");
+        
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+
+          slides[slideIndex-1].style.display = "block";  
+
+          setTimeout(carousel, 6000); // Change image every 6 seconds
+        }
     </script>
     
 
