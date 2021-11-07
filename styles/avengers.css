@@ -413,8 +413,16 @@ footer b{
     }
 
     .jumbotron > p{
-        font-size: 1vw;
+        font-size: 1.1vw;
         line-height: 1.8vw;
+    }
+
+    .options{
+        grid-auto-columns: 30%;
+    }
+
+    #AveLogo{
+        width: 70%;
     }
 }
 
@@ -424,11 +432,88 @@ footer b{
         --jumbotron-text-padding: 15px;
         --bg-height: 50em;
     }
+
     .jumbotron > p{
         line-height: 2vw;
+        /* font-size: 1.1vw; */
     }
 
     .jumbotron > h1{
         font-size: 1.5em;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .jumbotron{
+        grid-template-areas: "title"
+                            "pic"
+                            "text";
+        grid-auto-columns: calc(var(--jumbotron-half-width) + var(--jumbotron-half-width));
+        grid-auto-rows: var(--jumbotron-height);
+    }
+
+    .jumbotron > img{
+        width: calc(var(--jumbotron-half-width) + var(--jumbotron-half-width));
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .jumbotron > p{
+        line-height: normal;
+        font-size:medium;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        text-align: center;
+    }
+
+    .options{
+        grid-template-areas:"titleop"
+                            "op1"
+                            "op2"
+                            "op3";
+    
+        grid-auto-columns: 80%;
+        grid-template-rows: var(--jumbotron-title-height) auto;
+    }
+    
+    
+    .op{
+        margin: 2em 0 2em 0;
+        border-radius: 5px;
+    }
+
+    .op > p{
+        margin-top: 0;
+    }
+
+    .options > h1{
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    footer > p{
+        max-width: 80%;
+    }
+
+
+}
+
+@media screen and (max-width: 700px){
+    #AveLogo{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .jumbotron > p{
+        font-size: 13px;
+    }
+
+    :root{
+        --bg-height: 50em;
     }
 }
