@@ -476,7 +476,7 @@ footer b{
                             "op3";
     
         grid-auto-columns: 80%;
-        grid-template-rows: var(--jumbotron-title-height) auto;
+        grid-auto-rows: auto;
     }
     
     
