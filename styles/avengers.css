@@ -6,7 +6,7 @@
     --jumbotron-height: auto;
     --jumbotron-margin-top: 315px;
     --jumbotron-betwen-space: 100px;
-    --jumbotron-title-height: 100px;
+    --jumbotron-title-height: auto;
     --jumbotron-text-padding: 30px;
     --space-betwen-main-and-footer: 10em;
 
@@ -133,29 +133,25 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .jumbotron{
     margin-top: var(--jumbotron-betwen-space);
-    justify-content: center;
+    /* justify-content: center; */
     display: grid;
     grid-template-areas:"title title"
                         "pic text";
-    grid-auto-columns: auto;
+    grid-auto-columns: var(--jumbotron-half-width);
     grid-template-rows: var(--jumbotron-title-height) var(--jumbotron-height);
+    /* grid-auto-rows: auto; */
 
 }
-
-/* #firsttitle{
-    -webkit-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(to left, rgb(24, 24, 24), rgb(180, 180, 180));
-	color: transparent;
-} */
 
 .jumbotron > img{
     grid-area: pic;
     width: var(--jumbotron-half-width);
+    /* width: auto; */
     height: var(--jumbotron-height);
     object-fit: cover;
     border-top-left-radius: 10px;
@@ -170,12 +166,13 @@ main{
     margin: 0;
     padding-left: var(--jumbotron-text-padding);
     padding-right: var(--jumbotron-text-padding);
-    width: var(--jumbotron-half-width);
+    /* width: var(--jumbotron-half-width); */
+    width: auto;
     color: white;
-    font-size: 17px;
+    font-size: 0.8vw;
     font-family: 'Poppins', sans-serif;
     background-color: rgba(0, 0, 0, 0.774);
-    line-height: 25px;
+    line-height: 1.5vw;
 
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -187,6 +184,7 @@ main{
     grid-area: title;
     text-align: center;
     color: rgb(211, 211, 211);
+    /* padding-bottom: 50px; */
 }
 
 
@@ -398,3 +396,39 @@ footer b{
     to {opacity: 1}
 }
 
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1500px){
+    :root{
+        --jumbotron-half-width: 40vw;
+        --bg-height: 60em;
+    }
+
+    .jumbotron > p{
+        font-size: 1vw;
+        line-height: 1.8vw;
+    }
+}
+
+
+@media screen and (max-width: 1150px){
+    :root{
+        --jumbotron-text-padding: 15px;
+        --bg-height: 50em;
+    }
+    .jumbotron > p{
+        line-height: 2vw;
+    }
+
+    .jumbotron > h1{
+        font-size: 1.5em;
+    }
+}
