@@ -330,45 +330,17 @@ footer b{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CAROUSEL */
-
-
 .carousel-container{
     margin: 0;
     padding: 0;
     position: absolute;
     top: 7em;
     height: var(--bg-height);
-    /* height: auto; */
     width: 100%;
     object-fit: cover;
     object-position: center;
-    background-color: rgb(34, 34, 34);
-    /* background-image: url(../images/BlaPanBG.jpg); */
-    /* overflow: hidden; */
-    /* background-size: cover; */
-    /* background-position-x: center; */
-    /* background-repeat: no-repeat; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* z-index: 0; */
+    background-color: rgb(36, 36, 36);
 }
 
 .fade > img{
@@ -386,15 +358,24 @@ footer b{
     animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-    from {opacity: .4} 
+@-webkit-keyframes fade{
+    from {opacity: .4}
     to {opacity: 1}
 }
 
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
